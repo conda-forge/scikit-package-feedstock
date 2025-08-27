@@ -36,6 +36,7 @@ test:
     - codecov
     - pathlib
     - cookiecutter
+    - pytest-mock
   source_files:
     - tests
   commands:
