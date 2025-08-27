@@ -32,6 +32,10 @@ test:
     - pip
     - pytest
     - python {{ python_min }}
+    - pytest-cov
+    - codecov
+    - pathlib
+    - cookiecutter
   source_files:
     - tests
   commands:
