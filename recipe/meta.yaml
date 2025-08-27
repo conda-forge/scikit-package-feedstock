@@ -37,6 +37,7 @@ test:
     - pathlib
     - cookiecutter
     - pytest-mock
+    - pytest-env
   source_files:
     - tests
   commands:
