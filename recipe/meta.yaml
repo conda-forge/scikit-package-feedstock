@@ -1,6 +1,6 @@
-{% set python_min = '3.11' %}
+{% set python_min = "3.11" %}
 {% set name = "scikit-package" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/scikit_package/scikit_package-{{ version }}.tar.gz
-  sha256: 6b54cb47047825ac7379b5d7977dc25a77931bc115af8924ad4f2adbc841b64a
+  sha256: a117ae74fe3c8cfe42ac92d4293592e25b414580a56eefe8a6d7f35a8d50e45f
 
 build:
   noarch: python
@@ -27,7 +27,7 @@ requirements:
     - python >={{ python_min }}
     - cookiecutter
 
-test: 
+test:
   requires:
     - pip
     - pytest
