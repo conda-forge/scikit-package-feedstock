@@ -40,6 +40,8 @@ test:
     - pytest-env
   source_files:
     - tests
+    - news
+    - hooks
   commands:
     - pip check
     - pytest
