@@ -12,10 +12,10 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
-    - package = scikit_package.app:main
+    - package = scikit_package.scikit_package_app:main
 
 requirements:
   host:
@@ -26,16 +26,13 @@ requirements:
   run:
     - python >={{ python_min }}
     - cookiecutter
+    - click
+    - packaging
 
 test:
   requires:
     - pip
     - pytest
-    - python {{ python_min }}
-    - pytest-cov
-    - codecov
-    - pathlib
-    - cookiecutter
     - pytest-mock
     - pytest-env
   source_files:
