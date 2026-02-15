@@ -1,6 +1,6 @@
-{% set python_min = "3.11" %}
+{% set python_min = "3.12" %}
 {% set name = "scikit-package" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/scikit_package/scikit_package-{{ version }}.tar.gz
-  sha256: 2ac69416d4e597719d999f1cda06046c20bcd6f925ce351b9c0bad9d5b8debe2
+  sha256: ca02733debfaca05a623a51d9dacbf17cfc7f7345b70c1c0fb7251f270500ede
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - package = scikit_package.scikit_package_app:main
@@ -28,9 +28,11 @@ requirements:
     - cookiecutter
     - click
     - packaging
+    - diffpy.utils
 
 test:
   requires:
+    - python {{ python_min }}
     - pip
     - pytest
     - pytest-mock
