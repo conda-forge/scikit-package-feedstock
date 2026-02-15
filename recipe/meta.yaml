@@ -28,6 +28,7 @@ requirements:
     - cookiecutter
     - click
     - packaging
+    - diffpy.utils
 
 test:
   requires:
