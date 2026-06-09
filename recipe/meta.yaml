@@ -1,6 +1,6 @@
 {% set python_min = "3.12" %}
 {% set name = "scikit-package" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/scikit_package/scikit_package-{{ version }}.tar.gz
-  sha256: ca02733debfaca05a623a51d9dacbf17cfc7f7345b70c1c0fb7251f270500ede
+  sha256: 5f5e15636fa5f6131bf8c148f0d8c67b0f55cf8ed340a871f66b41ec6062ac4c
 
 build:
   noarch: python
